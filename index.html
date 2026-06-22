@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Docker Dynamos — Containerize Your World</title>
+<meta name="description" content="A beginner-friendly Docker tutorial hub built by Team Docker Dynamos.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="placard-nav">
+  <div class="container">
+    <a href="index.html" class="brand">🐳 Docker Dynamos <small>dd-2026</small></a>
+    <ul>
+      <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="manifest-hero">
+  <div class="stamp"><span>Inspected by<br>Docker Dynamos</span></div>
+  <div class="container">
+    <p class="manifest-id">Manifest No. DD-2026 // Cargo: Knowledge</p>
+    <h1>Ship your apps<br>in <span>containers,</span><br>not excuses.</h1>
+    <p class="lede">A beginner-friendly walkthrough of Docker — what containers actually are, why they beat virtual machines, and the commands you'll use on day one.</p>
+    <div class="hero-actions">
+      <a href="#start" class="btn btn-primary">Start the tutorial</a>
+      <a href="about.html" class="btn btn-ghost">Meet the team</a>
+    </div>
+  </div>
+</header>
+
+<div class="hazard" role="presentation"></div>
+
+<section class="manifest-section" id="start">
+  <div class="container">
+    <p class="section-label">Cargo Manifest // 01</p>
+    <h2 class="section-title">What's in this shipment</h2>
+    <div class="cargo-grid">
+      <div class="cargo-item">
+        <span class="cargo-tag">ITEM 01</span>
+        <h3>What is Docker?</h3>
+        <p>A platform that packages an app and everything it needs to run into a single, portable unit called a container.</p>
+      </div>
+      <div class="cargo-item">
+        <span class="cargo-tag">ITEM 02</span>
+        <h3>Images vs. Containers</h3>
+        <p>An image is the sealed crate — a read-only blueprint. A container is that crate opened and running.</p>
+      </div>
+      <div class="cargo-item">
+        <span class="cargo-tag">ITEM 03</span>
+        <h3>Why Docker?</h3>
+        <p>"Works on my machine" stops being an excuse — the container carries its own environment everywhere it goes.</p>
+      </div>
+      <div class="cargo-item">
+        <span class="cargo-tag">ITEM 04</span>
+        <h3>Hands-on ready</h3>
+        <p>Every section below pairs with real commands you can run the moment Docker Desktop is installed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="manifest-section" style="background: var(--white);">
+  <div class="container">
+    <p class="section-label">Cargo Manifest // 02</p>
+    <h2 class="section-title">Container vs. virtual machine</h2>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Trait</th>
+            <th>Virtual Machine</th>
+            <th>Docker Container</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Boot time</td>
+            <td>Minutes — boots a full OS</td>
+            <td>Seconds — shares the host kernel</td>
+          </tr>
+          <tr>
+            <td>Size</td>
+            <td>Gigabytes per VM</td>
+            <td>Megabytes per image, typically</td>
+          </tr>
+          <tr>
+            <td>Isolation</td>
+            <td>Full hardware-level isolation</td>
+            <td>Process-level isolation</td>
+          </tr>
+          <tr>
+            <td>Portability</td>
+            <td>Tied to a hypervisor</td>
+            <td>Runs anywhere Docker runs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="manifest-section">
+  <div class="container">
+    <p class="section-label">Cargo Manifest // 03</p>
+    <h2 class="section-title">Your first Dockerfile</h2>
+    <pre class="dock-code"><span class="comment"># Start from a small base image</span>
+<span class="cmd">FROM</span> node:20-alpine
+
+<span class="comment"># Set the working directory inside the container</span>
+<span class="cmd">WORKDIR</span> /app
+
+<span class="comment"># Copy dependency files first, install, then copy the rest</span>
+<span class="cmd">COPY</span> package*.json ./
+<span class="cmd">RUN</span> npm install
+<span class="cmd">COPY</span> . .
+
+<span class="comment"># Tell Docker which port the app listens on</span>
+<span class="cmd">EXPOSE</span> 3000
+
+<span class="comment"># Command that runs when the container starts</span>
+<span class="cmd">CMD</span> [<span class="str">"node"</span>, <span class="str">"server.js"</span>]</pre>
+  </div>
+</section>
+
+<section class="manifest-section" style="background: var(--white);">
+  <div class="container">
+    <p class="section-label">Cargo Manifest // 04</p>
+    <h2 class="section-title">Commands you'll reach for first</h2>
+    <ul class="cheat-list">
+      <li><code>docker pull &lt;image&gt;</code><span>Download an image from Docker Hub to your machine.</span></li>
+      <li><code>docker build -t &lt;name&gt; .</code><span>Build an image from a Dockerfile in the current folder.</span></li>
+      <li><code>docker run &lt;image&gt;</code><span>Start a new container from an image.</span></li>
+      <li><code>docker ps</code><span>List containers that are currently running.</span></li>
+      <li><code>docker stop &lt;id&gt;</code><span>Stop a running container by its ID or name.</span></li>
+      <li><code>docker images</code><span>List every image stored locally.</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2>Ready to meet the crew behind the manifest?</h2>
+    <a href="about.html" class="btn btn-primary">Go to About</a>
+  </div>
+</div>
+
+<footer class="dock-footer">
+  <div class="container">
+    <span>&copy; 2026 Docker Dynamos</span>
+    <span>Built for our GitHub Pages assignment</span>
+  </div>
+</footer>
+
+</body>
+</html>
