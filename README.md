@@ -11,10 +11,10 @@ A multi-page static website built as a collaborative GitHub assignment, hosted v
 
 | Member | Role | File Owned |
 |---|---|---|
-| [Your Name] | Home page | `index.html` |
-| [Member 2] | About page | `about.html` |
-| [Member 3] | Contact page | `contact.html` |
-| [Member 4] | Styling | `style.css` |
+| Prabha | Home page | `index.html` |
+| Rohith | About page | `about.html` |
+| Gulshan | Contact page | `contact.html` |
+| Prabha | Styling | `style.css` |
 
 ---
 
