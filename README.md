@@ -13,7 +13,7 @@ A multi-page static website built as a collaborative GitHub assignment, hosted v
 |---|---|---|
 | Prabha | Home page | `index.html` |
 | Rohith | About page | `about.html` |
-| Gulshan | Contact page | `contact.html` |
+| Rohith | Contact page | `contact.html` |
 | Prabha | Styling | `style.css` |
 
 ---
