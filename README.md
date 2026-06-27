@@ -3,7 +3,7 @@
 A multi-page static website built as a collaborative GitHub assignment, hosted via **GitHub Pages**. The site introduces beginners to Docker — what containers are, how they differ from virtual machines, and the core commands used to get started.
 
 **Live site:** `https://praby07.github.io/Docker-Dynamos/`
-*(replace with your actual GitHub Pages URL once published)*
+
 
 ---
 
